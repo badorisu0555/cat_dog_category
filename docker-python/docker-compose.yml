@@ -1,0 +1,12 @@
+version: '3.8'
+
+services:
+  python:
+    build:
+      context: ./docker/python
+      dockerfile: Dockerfile
+    container_name: python
+    volumes:
+      - ./src:/app
+    stdin_open: true
+    tty: true
